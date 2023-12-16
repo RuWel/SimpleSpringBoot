@@ -64,7 +64,7 @@ steps:
   inputs:
     awsCredentials: 'aws_s3_connectrion'
     regionName: 'eu-central-1'
-    applicationName: 'SimpleSpringBoot'
+    applicationName: 'getting-started-app'
     environmentName: 'MyAWSEnvironment-dev'
     applicationType: 's3'
     deploymentBundleBucket: 'aws-my-build-artifact'
