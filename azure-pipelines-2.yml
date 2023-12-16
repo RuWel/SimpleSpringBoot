@@ -10,14 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CmdLine@2
+- task: Maven@4
   inputs:
-    script: |
-      echo '$(Build.DefinitionName)'
-      echo '$(Build.BuildId)'
-      echo '$(Build.BuildNumber)'
-      echo '$(Build.ArtifactStagingDirectory)'
-      echo '$(Build.SourcesDirectory)'
-      echo '$(Build.StagingDirectory)'
-      echo '$(Pipeline.Workspace)'
-      echo '$(System.DefaultWorkingDirectory)'
+    mavenPomFile: 'pom.xml'
+    goals: 'clean install'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
