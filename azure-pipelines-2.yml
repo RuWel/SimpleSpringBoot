@@ -39,3 +39,8 @@ steps:
     ArtifactName: 'SimpleSpringBoot'
     publishLocation: 'Container'
 
+- task: DownloadPipelineArtifact@2
+  inputs:
+    buildType: 'current'
+    artifactName: 'SimpleSpringBoot'
+    targetPath: '$(Pipeline.Workspace)'
