@@ -31,3 +31,11 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
     OverWrite: true
+  
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact SimpleSpringBoot'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'SimpleSpringBoot'
+    publishLocation: 'Container'
+
