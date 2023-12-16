@@ -44,3 +44,7 @@ steps:
     buildType: 'current'
     artifactName: 'SimpleSpringBoot'
     targetPath: '$(Pipeline.Workspace)'
+
+- task: CmdLine@2
+  inputs:
+    script: 'ls $(Pipeline.Workspace)'
