@@ -1,0 +1,9 @@
+Dec 16 10:49:43 ip-172-31-30-246 web[2826]: 2023-12-16 10:49:43.101:INFO::main: Logging initialized @313ms to org.eclipse.jetty.util.log.StdErrLog
+Dec 16 10:49:43 ip-172-31-30-246 web[2826]: 2023-12-16 10:49:43.305:INFO:oejs.Server:main: jetty-9.4.52.v20230823; built: 2023-08-23T19:29:37.669Z; git: abdcda73818a1a2c705da276edb0bf6581e7997e; jvm 17.0.9+8-LTS
+Dec 16 10:49:43 ip-172-31-30-246 web[2826]: 2023-12-16 10:49:43.455:INFO:oejs.AbstractConnector:main: Started ServerConnector@3a4afd8d{HTTP/1.1, (http/1.1)}{0.0.0.0:5000}
+Dec 16 10:49:43 ip-172-31-30-246 web[2826]: 2023-12-16 10:49:43.459:INFO:oejs.Server:main: Started @684ms
+Dec 16 11:17:52 ip-172-31-30-246 web[4307]: Error: Invalid or corrupt jarfile application.jar
+Dec 16 11:17:52 ip-172-31-30-246 web[4316]: Error: Invalid or corrupt jarfile application.jar
+Dec 16 11:17:52 ip-172-31-30-246 web[4321]: Error: Invalid or corrupt jarfile application.jar
+Dec 16 11:17:52 ip-172-31-30-246 web[4326]: Error: Invalid or corrupt jarfile application.jar
+Dec 16 11:17:53 ip-172-31-30-246 web[4331]: Error: Invalid or corrupt jarfile application.jar

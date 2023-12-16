@@ -1,0 +1,3 @@
+2023/12/16 10:49:42 [warn] 2831#2831: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2023/12/16 10:49:43 [warn] 2884#2884: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2023/12/16 10:49:43 [warn] 2885#2885: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size

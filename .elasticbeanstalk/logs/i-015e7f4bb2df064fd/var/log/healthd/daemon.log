@@ -1,0 +1,116 @@
+# Logfile created on 2023-12-16 10:49:40 +0000 by logger.rb/v1.5.0
+A, [2023-12-16T10:49:40.929328 #2702]   ANY -- : healthd daemon 1.0.6 initialized
+W, [2023-12-16T10:49:41.033611 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:49:46.033932 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:49:51.034200 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:49:56.034540 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:01.034886 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:06.035280 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:11.035643 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:16.035982 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:21.036287 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:26.036656 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:31.037074 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:36.037400 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:41.037768 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:46.038171 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:51.038483 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:50:56.038832 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:51:01.039184 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:51:06.039521 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:51:11.039823 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:51:16.040168 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:51:21.040476 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-10" does not exist
+W, [2023-12-16T10:55:10.950523 #2702]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {:id=>"0", :namespace=>"application", :timestamp=>1702723890, :data=>"{\"duration\":10,\"latency_histogram\":[[0.002,1],[0.219,1]],\"http_counters\":{\"status_200\":2,\"request_count\":2}}"}
+W, [2023-12-16T11:00:02.438361 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:07.438680 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:12.439038 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:17.439479 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:22.439783 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:27.440120 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:32.440464 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:37.440767 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:42.441098 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:47.441413 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:52.441741 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:00:57.442071 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:02.442407 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:07.442741 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:12.443075 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:17.443387 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:22.443721 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:27.444069 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:32.444401 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:37.444736 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:42.445072 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:47.445398 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:52.445734 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:01:57.446086 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:02.446436 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:07.446766 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:12.447104 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:17.447451 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:22.447774 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:27.448117 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:32.448452 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:37.448802 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:42.449118 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:47.449462 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:52.449820 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:02:57.450192 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:02.450537 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:07.450893 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:12.451262 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:17.451579 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:22.451911 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:27.452282 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:32.452628 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:37.452957 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:42.453281 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:47.453594 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:52.453941 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:03:57.454286 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:02.454637 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:07.454994 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:12.455349 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:17.455737 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:22.456064 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:27.456438 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:32.456756 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:37.457081 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:42.457445 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:47.457757 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:52.458094 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:04:57.458437 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:02.458773 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:07.459087 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:12.459395 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:17.459727 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:22.460066 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:27.460395 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:32.460737 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:37.461068 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:42.461398 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:47.461762 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:52.462116 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:05:57.462452 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:06:02.462819 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:06:07.463173 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:06:12.463502 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:06:17.463829 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:06:22.464192 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:06:27.464659 #2702]  WARN -- : log file "/var/log/nginx/healthd/application.log.2023-12-16-11" does not exist
+W, [2023-12-16T11:17:30.947725 #2702]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {:id=>"0", :namespace=>"application", :timestamp=>1702724800, :data=>"{\"duration\":10,\"latency_histogram\":[[0.001,1]],\"http_counters\":{\"status_200\":1,\"request_count\":1}}"}
+F, [2023-12-16T11:17:46.047549 #2702] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/puma-6.4.0/lib/puma/launcher.rb:434:in `block in setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/puma-6.4.0/lib/puma/single.rb:63:in `join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/puma-6.4.0/lib/puma/single.rb:63:in `run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/puma-6.4.0/lib/puma/launcher.rb:194:in `run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/puma-6.4.0/lib/puma/cli.rb:75:in `run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/healthd-1.0.6/bin/healthd:112:in `block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/healthd-1.0.6/bin/healthd:19:in `chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.1.0/gems/healthd-1.0.6/bin/healthd:19:in `<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in `load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in `<main>'
+A, [2023-12-16T11:17:48.773237 #4069]   ANY -- : healthd daemon 1.0.6 initialized
+W, [2023-12-16T11:17:58.912847 #4069]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {:id=>"0", :namespace=>"application", :timestamp=>1702724790, :data=>"{\"duration\":10,\"latency_histogram\":[[0.003,1]],\"http_counters\":{\"status_200\":1,\"request_count\":1}}"}
+W, [2023-12-16T11:17:58.912922 #4069]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {:id=>"1", :namespace=>"application", :timestamp=>1702724800, :data=>"{\"duration\":10,\"latency_histogram\":[[0.001,1]],\"http_counters\":{\"status_200\":1,\"request_count\":1}}"}

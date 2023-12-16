@@ -1,0 +1,62 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Maven@4
+  displayName: 'Clean Build'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'clean'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
+- task: Maven@4
+  displayName: 'Create Build'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'install'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+    
+  
+- task: CopyFiles@2
+  displayName: 'Copy Files'
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/target'
+    Contents: '**/*.jar'
+    TargetFolder: '$(System.ArtifactsStagingDirectory)'
+    CleanTargetFolder: true
+    OverWrite: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(System.ArtifactsStagingDirectory)'
+    ArtifactName: 'myDeploy'
+    publishLocation: 'Container'
+
+
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'aws_s3_connectrion'
+    regionName: 'eu-central-1'
+    bucketName: 'aws-my-build-artifact'
+    sourceFolder: '$(System.ArtifactsStagingDirectory)'
+    globExpressions: '**/SimpleSpringBoot*.jar'
+    targetFolder: 'MyDeliveries'
+    logRequest: true
+    logResponse: true
+  
