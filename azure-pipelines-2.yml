@@ -13,11 +13,11 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo $(Build.DefinitionName)
-      echo $(Build.BuildId)
-      echo $(Build.BuildNumber)
-      echo $(Build.ArtifactStagingDirectory)
-      echo $(Build.SourcesDirectory)
-      echo $(Build.StagingDirectory)
-      echo $(Pipeline.Workspace)
-      echo $(System.DefaultWorkingDirectory)
+      echo '$(Build.DefinitionName)'
+      echo '$(Build.BuildId)'
+      echo '$(Build.BuildNumber)'
+      echo '$(Build.ArtifactStagingDirectory)'
+      echo '$(Build.SourcesDirectory)'
+      echo '$(Build.StagingDirectory)'
+      echo '$(Pipeline.Workspace)'
+      echo '$(System.DefaultWorkingDirectory)'
