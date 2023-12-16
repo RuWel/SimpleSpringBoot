@@ -11,6 +11,7 @@ pool:
 
 steps:
 - task: Maven@4
+  displayName: 'Maven Clean and Install'
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean install'
