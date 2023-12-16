@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  ARTIFACT_NAME: 'SimpleSpringBoot'
+
 steps:
 - task: Maven@4
   displayName: 'Maven Clean and Install'
@@ -36,13 +39,13 @@ steps:
   displayName: 'Publish artifact SimpleSpringBoot'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'SimpleSpringBoot'
+    ArtifactName: $(ARTIFACT_NAME)
     publishLocation: 'Container'
 
 - task: DownloadPipelineArtifact@2
   inputs:
     buildType: 'current'
-    artifactName: 'SimpleSpringBoot'
+    artifactName: $(ARTIFACT_NAME)
     targetPath: '$(Pipeline.Workspace)'
 
 - task: CmdLine@2
