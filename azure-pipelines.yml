@@ -60,3 +60,13 @@ steps:
     logRequest: true
     logResponse: true
   
+- task: BeanstalkDeployApplication@1
+  inputs:
+    awsCredentials: 'aws_s3_connectrion'
+    regionName: 'eu-central-1'
+    applicationName: 'SimpleSpringBoot'
+    environmentName: 'MyAWSEnvironment-dev'
+    applicationType: 's3'
+    deploymentBundleBucket: 'aws-my-build-artifact'
+    deploymentBundleKey: 'MyDeliveries/SimpleSpringBoot-0.0.1-SNAPSHOT.jar'
+    versionLabel: '$(Build.BuildNumber)'
