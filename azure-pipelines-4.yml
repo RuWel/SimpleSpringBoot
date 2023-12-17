@@ -54,3 +54,4 @@ steps:
     script: |
       cd $(System.ArtifactsStagingDirectory)
       pwd
+
