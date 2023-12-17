@@ -4,6 +4,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  ARTIFACT_NAME: 'SpringBootApp'
+  BUCKET_NAME: 'aws-bucket-eu-central-1'
+  BUCKET_FOLDER: 'deliveries'
+
 steps: 
 - task: Maven@4
   displayName: 'Clean Build and Install'
@@ -31,7 +36,7 @@ steps:
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'myDeploy'
+    ArtifactName: $(ARTIFACT_NAME)
     publishLocation: 'Container'
 
 - task: Bash@3
@@ -48,10 +53,10 @@ steps:
   inputs:
     awsCredentials: 'aws-service-connection'
     regionName: 'eu-central-1'
-    bucketName: 'aws-bucket-eu-central-1'
+    bucketName: $(BUCKET_NAME)
     sourceFolder: '$(Build.ArtifactStagingDirectory)'
     globExpressions: '**/app.jar'
-    targetFolder: 'deliveries'
+    targetFolder: $(BUCKET_FOLDER)
     keyManagement: 'awsManaged'
     encryptionAlgorithm: 'AES256'
     logRequest: true
@@ -65,7 +70,7 @@ steps:
     applicationName: 'AwsSpringBootApp'
     environmentName: 'AwsSpringBootApp-env'
     applicationType: 's3'
-    deploymentBundleBucket: 'aws-bucket-eu-central-1'
+    deploymentBundleBucket: $(BUCKET_NAME)
     deploymentBundleKey: 'deliveries/app.jar'
     logRequest: true
     logResponse: true
