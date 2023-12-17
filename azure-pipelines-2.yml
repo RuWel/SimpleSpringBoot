@@ -27,7 +27,7 @@ steps:
     sonarQubeRunAnalysis: false
 
 - task: CopyFiles@2
-  displayName: 'Copy JAR file to Atrifact Satging Directory'
+  displayName: 'Copy JAR file to Artifact Staging Directory'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
     Contents: '**/*.jar'
@@ -43,6 +43,7 @@ steps:
     publishLocation: 'Container'
 
 - task: S3Upload@1
+  displayName: 'Upload to AWS S3'
   inputs:
     awsCredentials: 'aws_s3_connectrion'
     regionName: 'eu-central-1'
