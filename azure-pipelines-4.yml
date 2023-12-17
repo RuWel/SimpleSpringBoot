@@ -68,3 +68,15 @@ steps:
     encryptionAlgorithm: 'AES256'
     logRequest: true
     logResponse: true
+
+- task: BeanstalkDeployApplication@1
+  inputs:
+    awsCredentials: 'aws-service-connection'
+    regionName: 'eu-central-1'
+    applicationName: 'AwsSpringBootApp'
+    environmentName: 'AwsSpringBootApp-env'
+    applicationType: 's3'
+    deploymentBundleBucket: 'aws-bucket-eu-central-1'
+    deploymentBundleKey: 'deliveries/app.jar'
+    logRequest: true
+    logResponse: true
