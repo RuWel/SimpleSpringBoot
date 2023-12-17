@@ -28,12 +28,13 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
+
 - task: CopyFiles@2
   displayName: 'Copy JAR file to Artifact Staging Directory'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
     Contents: '**/*.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/app.jar'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
     OverWrite: true
   
