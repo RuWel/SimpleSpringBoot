@@ -28,17 +28,11 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      cd $(Build.SourcesDirectory)/target
-      cp **/*.jar app.jar
-
 - task: CopyFiles@2
   displayName: 'Copy JAR file to Artifact Staging Directory'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
-    Contents: 'app.jar'
+    Contents: '**/*.jar'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
     OverWrite: true
@@ -57,17 +51,6 @@ steps:
     regionName: 'eu-central-1'
     bucketName: $(AWS_S3_BUCKET)
     sourceFolder: '$(Build.StagingDirectory)'
-    globExpressions: 'app.jar'
+    globExpressions: '**/*.jar'
     targetFolder: $(AWS_TARGET_FOLEDER)
 
-- task: BeanstalkDeployApplication@1
-  displayName: 'Deploy Application to AWS Beanstalk'
-  inputs:
-    awsCredentials: 'aws_s3_connectrion'
-    regionName: 'eu-central-1'
-    applicationName: 'getting-started-app'
-    environmentName: 'MyAWSEnvironment-dev'
-    applicationType: 's3'
-    deploymentBundleBucket: 'aws-my-build-artifact'
-    deploymentBundleKey: 'MyDeliveries'
-    versionLabel: '$(Build.BuildNumber)'
