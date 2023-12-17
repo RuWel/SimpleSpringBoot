@@ -48,13 +48,19 @@ steps:
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd $(System.ArtifactsStagingDirectory)
+      find . -name '*.jar' -exec cp -p '{}' app.jar ';'
+
 - task: S3Upload@1
   inputs:
     awsCredentials: 'aws-service-connection'
     regionName: 'eu-central-1'
     bucketName: 'aws-bucket-eu-central-1'
     sourceFolder: '$(System.ArtifactsStagingDirectory)'
-    globExpressions: '**/SimpleSpringBoot*.jar'
+    globExpressions: '**/app.jar'
     targetFolder: 'deliveries'
     keyManagement: 'awsManaged'
     encryptionAlgorithm: 'AES256'
@@ -69,6 +75,6 @@ steps:
     environmentName: 'AwsSpringBootApp-env'
     applicationType: 's3'
     deploymentBundleBucket: 'aws-bucket-eu-central-1'
-    deploymentBundleKey: 'deliveries/SimpleSpringBoot-0.0.1-SNAPSHOT.jar'
+    deploymentBundleKey: 'deliveries/app.jar'
     logRequest: true
     logResponse: true
