@@ -11,6 +11,8 @@ pool:
 
 variables:
   ARTIFACT_NAME: 'SimpleSpringBoot'
+  AWS_S3_BUCKET: 'aws-my-build-artifact'
+  AWS_TARGET_FOLEDER: 'MyDeliveries'
 
 steps:
 - task: Maven@4
@@ -47,7 +49,7 @@ steps:
   inputs:
     awsCredentials: 'aws_s3_connectrion'
     regionName: 'eu-central-1'
-    bucketName: 'aws-my-build-artifact'
+    bucketName: $(AWS_S3_BUCKET)
     sourceFolder: '$(Build.StagingDirectory)'
     globExpressions: '**/*.jar'
-    targetFolder: 'MyDeliveries'
+    targetFolder: $(AWS_TARGET_FOLEDER)
