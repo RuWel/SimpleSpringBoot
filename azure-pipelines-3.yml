@@ -54,8 +54,8 @@ steps:
   inputs:
     awsCredentials: 'aws-service-connection-eu-central-1'
     regionName: 'eu-central-1'
-    applicationName: 'AwsApplicationPLaceHolder'
-    environmentName: 'AwsApplicationPLaceHolder-env'
+    applicationName: 'AWSApplicationSpringBoot'
+    environmentName: 'AWSApplicationSpringBoot-env'
     applicationType: 's3'
     deploymentBundleBucket: 'aws-s3-bucket-eu-central-1'
     deploymentBundleKey: 'deliveries'
