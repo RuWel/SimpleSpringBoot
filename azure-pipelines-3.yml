@@ -1,0 +1,51 @@
+trigger:
+- none
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  ARTIFACT_NAME: 'SpringBootApp'
+  AWS_S3_BUCKET: 'aws-s3-bucket-eu-central-1'
+  AWS_TARGET_FOLEDER: 'deliveries'
+
+steps:
+- task: Maven@4
+  displayName: 'Maven Clean and Install'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'clean install'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
+- task: CopyFiles@2
+  displayName: 'Copy JAR file to Artifact Staging Directory'
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/target'
+    Contents: '**/*.jar'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    CleanTargetFolder: true
+    OverWrite: true
+  
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact SimpleSpringBoot'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: $(ARTIFACT_NAME)
+    publishLocation: 'Container'
+
+- task: S3Upload@1
+  displayName: 'Upload to AWS S3'
+  inputs:
+    awsCredentials: 'aws-service-connection-eu-central-1'
+    regionName: 'eu-central-1'
+    bucketName: $(AWS_S3_BUCKET)
+    sourceFolder: '$(Build.StagingDirectory)'
+    globExpressions: '**/*.jar'
+    targetFolder: $(AWS_TARGET_FOLEDER)
+
