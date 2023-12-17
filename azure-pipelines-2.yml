@@ -28,12 +28,17 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd $(Build.SourcesDirectory)/target
+      cp **/*.jar app.jar
 
 - task: CopyFiles@2
   displayName: 'Copy JAR file to Artifact Staging Directory'
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
-    Contents: '**/*.jar'
+    Contents: 'app.jar'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
     OverWrite: true
@@ -52,7 +57,7 @@ steps:
     regionName: 'eu-central-1'
     bucketName: $(AWS_S3_BUCKET)
     sourceFolder: '$(Build.StagingDirectory)'
-    globExpressions: '**/*.jar'
+    globExpressions: 'app.jar'
     targetFolder: $(AWS_TARGET_FOLEDER)
 
 - task: BeanstalkDeployApplication@1
