@@ -48,34 +48,10 @@ steps:
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
+steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: |
-      cd $(System.ArtifactsStagingDirectory)
-      find . -name '*.jar' -exec cp -p '{}' app.jar ';'
-
-- task: S3Upload@1
-  inputs:
-    awsCredentials: 'aws-service-connection'
-    regionName: 'eu-central-1'
-    bucketName: 'aws-bucket-eu-central-1'
-    sourceFolder: '$(System.ArtifactsStagingDirectory)'
-    globExpressions: '**/app.jar'
-    targetFolder: 'deliveries'
-    keyManagement: 'awsManaged'
-    encryptionAlgorithm: 'AES256'
-    logRequest: true
-    logResponse: true
-
-- task: BeanstalkDeployApplication@1
-  inputs:
-    awsCredentials: 'aws-service-connection'
-    regionName: 'eu-central-1'
-    applicationName: 'AwsSpringBootApp'
-    environmentName: 'AwsSpringBootApp-env'
-    applicationType: 's3'
-    deploymentBundleBucket: 'aws-bucket-eu-central-1'
-    deploymentBundleKey: 'deliveries/app.jar'
-    logRequest: true
-    logResponse: true
+    script: echo $MYSECRET
+  env:
+    MYSECRET: $(Foo)
