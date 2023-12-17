@@ -48,3 +48,16 @@ steps:
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'aws-service-connection'
+    regionName: 'eu-central-1'
+    bucketName: 'aws-bucket-eu-central-1'
+    sourceFolder: '$(System.ArtifactsStagingDirectory)'
+    globExpressions: '**/SimpleSpringBoot*.jar'
+    targetFolder: 'deliveries'
+    keyManagement: 'awsManaged'
+    encryptionAlgorithm: 'AES256'
+    logRequest: true
+    logResponse: true
+  
