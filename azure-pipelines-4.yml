@@ -48,10 +48,9 @@ steps:
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
-- task: Bash@3
+- task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
       cd $(System.ArtifactsStagingDirectory)
-      pwd
-
+      Get-ChildItem
