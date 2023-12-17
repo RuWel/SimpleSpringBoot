@@ -49,7 +49,7 @@ steps:
     targetType: 'inline'
     script: |
       cd $(System.ArtifactsStagingDirectory)
-      pwd'
+      pwd
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
