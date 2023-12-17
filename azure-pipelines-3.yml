@@ -49,3 +49,15 @@ steps:
     globExpressions: '**/*.jar'
     targetFolder: $(AWS_TARGET_FOLEDER)
 
+- task: BeanstalkDeployApplication@1
+  displayName: 'Deploy Application to AWS Beanstalk'
+  inputs:
+    awsCredentials: 'aws-service-connection-eu-central-1'
+    regionName: 'eu-central-1'
+    applicationName: 'AwsApplicationPLaceHolder'
+    environmentName: 'AwsApplicationPLaceHolder-env'
+    applicationType: 's3'
+    deploymentBundleBucket: 'aws-s3-bucket-eu-central-1'
+    deploymentBundleKey: 'deliveries'
+    versionLabel: '$(Build.BuildNumber)'
+
