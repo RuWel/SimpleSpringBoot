@@ -33,7 +33,7 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
     Contents: '**/*.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/app.jar'
     CleanTargetFolder: true
     OverWrite: true
   
@@ -63,5 +63,5 @@ steps:
     environmentName: 'MyAWSEnvironment-dev'
     applicationType: 's3'
     deploymentBundleBucket: 'aws-my-build-artifact'
-    deploymentBundleKey: 'MyDeliveries/**/*.jar'
+    deploymentBundleKey: 'MyDeliveries'
     versionLabel: '$(Build.BuildNumber)'
