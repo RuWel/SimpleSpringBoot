@@ -53,5 +53,5 @@ steps:
     targetType: 'inline'
     script: |
       cd $(Build.ArtifactStagingDirectory)
-      ls -all
+      find . -name '*.jar' -exec cp -p '{}' app.jar ';'
 
