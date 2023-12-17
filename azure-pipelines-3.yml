@@ -57,7 +57,8 @@ steps:
     applicationName: 'AWSApplicationSpringBoot'
     environmentName: 'AWSApplicationSpringBoot-env'
     applicationType: 's3'
-    deploymentBundleBucket: $(AWS_S3_BUCKET)
-    deploymentBundleKey: $(AWS_TARGET_FOLDER)
-    versionLabel: '$(Build.BuildNumber)'
+    deploymentBundleBucket: '$(AWS_S3_BUCKET)'
+    deploymentBundleKey: '$(AWS_TARGET_FOLDER)'
+    logRequest: true
+    logResponse: true
 
