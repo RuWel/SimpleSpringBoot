@@ -37,29 +37,31 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
     Contents: '**/*.jar'
-    TargetFolder: '$(System.ArtifactsStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
     OverWrite: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(System.ArtifactsStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
-- task: CmdLine@2
+- task: Bash@3
   inputs:
+    targetType: 'inline'
     script: |
-      cd $(System.ArtifactsStagingDirectory)
+      cd $(Build.ArtifactStagingDirectory)
       find . -name '*.jar' -exec cp -p '{}' app.jar ';'
+      ls -all
 
 - task: S3Upload@1
   inputs:
     awsCredentials: 'aws-service-connection'
     regionName: 'eu-central-1'
     bucketName: 'aws-bucket-eu-central-1'
-    sourceFolder: '$(System.ArtifactsStagingDirectory)'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)'
     globExpressions: '**/app.jar'
     targetFolder: 'deliveries'
     keyManagement: 'awsManaged'
