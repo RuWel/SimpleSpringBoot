@@ -15,3 +15,5 @@ steps:
     deploymentBundleBucket: 'aws-bucket-eu-central-1'
     deploymentBundleKey: 'deliveries'
     versionLabel: '$(Build.BuildNumber)'
+    logRequest: true
+    logResponse: true
