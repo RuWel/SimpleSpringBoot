@@ -7,7 +7,7 @@ pool:
 variables:
   ARTIFACT_NAME: 'SpringBootApp'
   AWS_S3_BUCKET: 'aws-s3-bucket-eu-central-1'
-  AWS_TARGET_FOLEDER: 'deliveries'
+  AWS_TARGET_FOLDER: 'deliveries'
 
 steps:
 - task: Maven@4
@@ -57,7 +57,7 @@ steps:
     applicationName: 'AWSApplicationSpringBoot'
     environmentName: 'AWSApplicationSpringBoot-env'
     applicationType: 's3'
-    deploymentBundleBucket: 'aws-s3-bucket-eu-central-1'
-    deploymentBundleKey: 'deliveries'
+    deploymentBundleBucket: $(BUCKET_NAME)
+    deploymentBundleKey: $(AWS_TARGET_FOLDER)
     versionLabel: '$(Build.BuildNumber)'
 
