@@ -61,7 +61,7 @@ steps:
     awsCredentials: 'aws-service-connection'
     regionName: 'eu-central-1'
     bucketName: 'aws-bucket-eu-central-1'
-    sourceFolder: '$(System.ArtifactsStagingDirectory)'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)'
     globExpressions: '**/app.jar'
     targetFolder: 'deliveries'
     keyManagement: 'awsManaged'
