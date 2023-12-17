@@ -48,7 +48,6 @@ steps:
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
-steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
