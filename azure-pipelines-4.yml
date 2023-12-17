@@ -37,14 +37,14 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/target'
     Contents: '**/*.jar'
-    TargetFolder: '$(System.ArtifactsStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
     OverWrite: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(System.ArtifactsStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'myDeploy'
     publishLocation: 'Container'
 
@@ -52,5 +52,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      cd $(System.ArtifactsStagingDirectory)
+      cd $(Build.ArtifactStagingDirectory)
       Get-ChildItem
