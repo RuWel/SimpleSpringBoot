@@ -42,21 +42,11 @@ steps:
     ArtifactName: $(ARTIFACT_NAME)
     publishLocation: 'Container'
 
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'current'
-    artifactName: $(ARTIFACT_NAME)
-    targetPath: '$(Pipeline.Workspace)'
-
-- task: CmdLine@2
-  inputs:
-    script: 'ls $(Pipeline.Workspace)'
-
 - task: S3Upload@1
   inputs:
     awsCredentials: 'aws_s3_connectrion'
     regionName: 'eu-central-1'
     bucketName: 'aws-my-build-artifact'
-    sourceFolder: '$(Pipeline.Workspace)'
+    sourceFolder: '$(Build.StagingDirectory)'
     globExpressions: '**/*.jar'
     targetFolder: 'MyDeliveries'
