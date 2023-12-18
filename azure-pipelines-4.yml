@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: self-hosted-agent-mac
 
 variables:
   ARTIFACT_NAME: 'SpringBootApp'
